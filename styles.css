@@ -24,7 +24,7 @@ body {
 }
 
 .phone-frame {
-    background: #1a1a1a;
+    background: linear-gradient(145deg, #2d5016, #1a3009);
     border-radius: 40px;
     padding: 12px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -38,7 +38,7 @@ body {
     left: -12px;
     width: 12px;
     height: 120px;
-    background: #2a2a2a;
+    background: #3d6b1e;
     border-radius: 0 0 0 20px;
 }
 
@@ -49,7 +49,7 @@ body {
     right: -12px;
     width: 12px;
     height: 120px;
-    background: #2a2a2a;
+    background: #3d6b1e;
     border-radius: 0 0 20px 0;
 }
 
@@ -329,10 +329,10 @@ body {
 }
 
 .welcome-btn {
-    background: black;
+    background: linear-gradient(145deg, #4a9f2e, #2d7a16);
     backdrop-filter: blur(10px);
     color: white;
-    border: 1px solid black;
+    border: 2px solid #5cb338;
     border-radius: 50px;
     padding: 16px 32px;
     font-size: 16px;
@@ -342,7 +342,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 8px 24px rgba(74, 159, 46, 0.5);
     position: relative;
     overflow: hidden;
 }
@@ -364,8 +364,8 @@ body {
 
 .welcome-btn:hover {
     transform: translateY(-2px);
-    background: black;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.9);
+    background: linear-gradient(145deg, #5cb338, #3d8a1e);
+    box-shadow: 0 12px 32px rgba(74, 159, 46, 0.7);
 }
 
 .welcome-btn:active {
@@ -397,7 +397,7 @@ body {
 .hint-text {
     display: block;
     font-size: 12px;
-    color: black;
+    color: #4a9f2e;
     margin-bottom: 8px;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
@@ -411,7 +411,7 @@ body {
 .dot {
     width: 6px;
     height: 6px;
-    background: black;
+    background: #4a9f2e;
     border-radius: 50%;
     animation: dotPulse 1.5s ease-in-out infinite;
 }
@@ -786,7 +786,7 @@ body {
     padding: 12px 16px;
     border: none;
     border-radius: 8px;
-    background: black;
+    background: rgba(74, 159, 46, 0.3);
     color: white;
     font-size: 14px;
     font-weight: 600;
@@ -795,13 +795,13 @@ body {
 }
 
 .tab-btn.active {
-    background: black;
+    background: linear-gradient(145deg, #4a9f2e, #2d7a16);
     color: white;
     backdrop-filter: blur(10px);
 }
 
 .tab-btn:hover:not(.active) {
-    background: black;
+    background: rgba(74, 159, 46, 0.5);
     color: white;
 }
 
@@ -878,8 +878,8 @@ body {
 }
 
 .dial-btn {
-    background: black;
-    border: 1px solid black;
+    background: linear-gradient(145deg, #3d6b1e, #2d5016);
+    border: 2px solid #4a9f2e;
     color: white;
     border-radius: 50%;
     width: 60px;
@@ -890,13 +890,13 @@ body {
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(74, 159, 46, 0.4);
 }
 
 .dial-btn:hover {
-    background: black;
+    background: linear-gradient(145deg, #4a9f2e, #3d6b1e);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 16px rgba(74, 159, 46, 0.6);
 }
 
 .dial-btn:active {
@@ -904,21 +904,21 @@ body {
 }
 
 .dial-btn.special {
-    background: black;
-    border-color: black;
+    background: linear-gradient(145deg, #5a8f3e, #4a7f2e);
+    border-color: #6aaf4e;
 }
 
 .dial-btn.special:hover {
-    background: black;
+    background: linear-gradient(145deg, #6aaf4e, #5a9f3e);
 }
 
 .dial-btn.delete {
-    background: black;
-    border-color: black;
+    background: linear-gradient(145deg, #8a3a2e, #6a2a1e);
+    border-color: #aa5a4e;
 }
 
 .dial-btn.delete:hover {
-    background: black;
+    background: linear-gradient(145deg, #9a4a3e, #7a3a2e);
 }
 
 .dial-btn.call {
@@ -992,7 +992,7 @@ body {
     width: 32px;
     height: 32px;
     border-radius: 8px;
-    border: 2px solid rgba(102, 126, 234, 0.3);
+    border: 2px solid rgba(74, 159, 46, 0.5);
 }
 
 .app-header h1 {
@@ -1010,8 +1010,8 @@ body {
 .user-role {
     font-size: 14px;
     font-weight: 600;
-    color: #667eea;
-    background: rgba(102, 126, 234, 0.1);
+    color: #4a9f2e;
+    background: rgba(74, 159, 46, 0.1);
     padding: 6px 12px;
     border-radius: 12px;
 }
@@ -1082,7 +1082,7 @@ body {
     background: #f8f9fa;
     transition: all 0.3s ease;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23667eea' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234a9f2e' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 12px center;
     padding-right: 36px;
@@ -1090,7 +1090,7 @@ body {
 
 .filter-select:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #4a9f2e;
     background: white;
 }
 
@@ -1123,7 +1123,7 @@ body {
 
 .search-input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #4a9f2e;
     background: white;
 }
 
@@ -1223,7 +1223,7 @@ body {
 
 .announcement-category {
     font-size: 12px;
-    color: #667eea;
+    color: #4a9f2e;
     font-weight: 600;
 }
 
@@ -1262,9 +1262,9 @@ body {
 }
 
 .btn-primary {
-    background: black;
+    background: linear-gradient(145deg, #4a9f2e, #2d7a16);
     color: white;
-    border: 1px solid black;
+    border: 2px solid #5cb338;
     border-radius: 12px;
     padding: 16px 24px;
     font-size: 16px;
@@ -1276,13 +1276,13 @@ body {
     justify-content: center;
     gap: 8px;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(74, 159, 46, 0.4);
 }
 
 .btn-primary:hover {
-    background: black;
+    background: linear-gradient(145deg, #5cb338, #3d8a1e);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 16px rgba(74, 159, 46, 0.6);
 }
 
 .btn-primary:active {
@@ -1291,8 +1291,8 @@ body {
 
 .btn-secondary {
     background: white;
-    color: #667eea;
-    border: 2px solid #667eea;
+    color: #4a9f2e;
+    border: 2px solid #4a9f2e;
     border-radius: 12px;
     padding: 12px 20px;
     font-size: 14px;
@@ -1305,7 +1305,7 @@ body {
 }
 
 .btn-secondary:hover {
-    background: #667eea;
+    background: #4a9f2e;
     color: white;
     transform: translateY(-2px);
 }
@@ -1356,12 +1356,12 @@ body {
 }
 
 .btn-edit {
-    color: #667eea;
-    border-color: #667eea;
+    color: #4a9f2e;
+    border-color: #4a9f2e;
 }
 
 .btn-edit:hover {
-    background: #667eea;
+    background: #4a9f2e;
     color: white;
 }
 
@@ -1431,7 +1431,7 @@ body {
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #4a9f2e;
     background: white;
 }
 
@@ -1454,7 +1454,7 @@ body {
 
 .form-group textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #4a9f2e;
     background: white;
 }
 
@@ -1467,6 +1467,133 @@ body {
     background: rgba(248, 249, 250, 0.9);
     padding: 2px 6px;
     border-radius: 4px;
+}
+
+/* Photo Upload Styles */
+.photo-upload-container {
+    position: relative;
+    margin-top: 8px;
+}
+
+.photo-input {
+    display: none;
+}
+
+.photo-upload-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 20px;
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    border: 2px dashed #4a9f2e;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 60px;
+}
+
+.photo-upload-btn:hover {
+    background: linear-gradient(145deg, #e9ecef, #dee2e6);
+    border-color: #5cb338;
+    transform: translateY(-2px);
+}
+
+.upload-icon {
+    font-size: 24px;
+}
+
+.upload-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a9f2e;
+}
+
+.photo-preview {
+    position: relative;
+    margin-top: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #4a9f2e;
+    background: #f8f9fa;
+}
+
+.photo-preview img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.remove-photo-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(220, 53, 69, 0.9);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.remove-photo-btn:hover {
+    background: #c82333;
+    transform: scale(1.1);
+}
+
+/* Announcement Photo Display */
+.announcement-photo {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #e9ecef;
+}
+
+/* Activity Photo in Dashboard */
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(74, 159, 46, 0.05);
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.activity-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #4a9f2e;
+    flex-shrink: 0;
+}
+
+.activity-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.activity-content strong {
+    color: #2c3e50;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.activity-content small {
+    color: #6c757d;
+    font-size: 12px;
 }
 
 /* Modal */
