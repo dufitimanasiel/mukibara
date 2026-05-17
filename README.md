@@ -1,61 +1,156 @@
-# Mukibara Village Announcement System
+# MukibaraConnect
 
-A mobile web application for village announcements in Kinyarwanda language.
+**Itangazo Rigera Kuri Bose** — Sisitemu yo gucunga amatangazo y'abaturage yanditswe mu Kinyarwanda gusa.
+
+MukibaraConnect is a modern full-stack public announcement management system built for Kinyarwanda-speaking communities.
+
+## Tech Stack
+
+- **Frontend**: React.js + Vite + TailwindCSS
+- **Backend**: Node.js + Express.js
+- **Database**: PostgreSQL + Sequelize ORM
+- **Authentication**: JWT + bcrypt
+- **Architecture**: REST API + MVC
 
 ## Features
 
-- **Role-based Authentication**
-  - Village Leader: Create, edit announcements
-  - Regular Users: View and search announcements only
-  - Admin: Full control (create, edit, delete)
+- 3 user roles: Admin, Manager (Umuyobozi), Citizens (Abaturage)
+- Complete announcement CRUD with image uploads
+- PIN-based citizen access
+- Modern glassmorphism dashboard design
+- Charts and analytics
+- Search, pagination, and filters
+- Toast notifications and confirmation dialogs
+- Fully responsive (mobile + desktop)
+- **Entire UI in Kinyarwanda**
 
-- **Announcement Management**
-  - Create, edit, and delete announcements
-  - Search functionality
-  - Persistent data storage using localStorage
-  - Kinyarwanda language interface
-
-- **Mobile Design**
-  - iPhone-style frame for desktop viewing
-  - Responsive mobile-first design
-  - Clean, modern interface
-
-## Login Credentials
-
-### Village Leader
-- Username: `mukibara`
-- Password: `ubuyobozi@123!`
-
-### Regular User
-- Username: `mukibara`
-- Password: `mukibara@123`
+## User Credentials
 
 ### Admin
 - Username: `admin`
 - Password: `mukibara@123!`
 
-## Usage
+### Manager (Umuyobozi)
+- Username: `mukibara`
+- Password: `umuyobozi@123!`
 
-1. Open `index.html` in a web browser
-2. Login with appropriate credentials
-3. Village Leaders and Admin can click "+ Tangaza" to create announcements
-4. All users can search through announcements
-5. Data persists automatically in browser localStorage
+### Citizens (Abaturage)
+- PIN: `*13672#`
 
-## Technical Details
+## Installation
 
-- **Frontend**: Pure HTML, CSS, JavaScript
-- **No frameworks required**
-- **Storage**: Browser localStorage
-- **Language**: Kinyarwanda
-- **Design**: Mobile-first with iPhone frame mockup
+### Prerequisites
+- Node.js 18+
+- PostgreSQL 14+
+- npm or yarn
 
-## Deployment
+### 1. Clone the repository
+```bash
+git clone https://github.com/dufitimanasiel/mukibara.git
+cd mukibara
+```
 
-This application can be deployed to any static web hosting service:
-- GitHub Pages
-- Netlify
-- Vercel
-- Any static file server
+### 2. Set up the database
+```bash
+# Create the PostgreSQL database
+psql -U postgres -f database/schema.sql
+```
 
-Simply upload the files and access `index.html` to run the application.
+Or create the database manually:
+```sql
+CREATE DATABASE mukibara_connect;
+```
+
+### 3. Set up the backend
+```bash
+cd backend
+cp .env.example .env
+# Edit .env with your database credentials
+npm install
+npm run dev
+```
+
+### 4. Set up the frontend
+```bash
+cd frontend
+cp .env.example .env
+npm install
+npm run dev
+```
+
+### 5. Access the application
+- Frontend: http://localhost:5173
+- Backend API: http://localhost:5000
+
+## Environment Variables
+
+### Backend (.env)
+```
+PORT=5000
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=mukibara_connect
+DB_USER=postgres
+DB_PASSWORD=your_password
+JWT_SECRET=your_jwt_secret
+NODE_ENV=development
+```
+
+### Frontend (.env)
+```
+VITE_API_URL=http://localhost:5000
+```
+
+## API Endpoints
+
+### Authentication
+- `POST /api/auth/login` — Login
+
+### Announcements
+- `GET /api/announcements` — Get all (authenticated)
+- `GET /api/announcements/public` — Get public announcements
+- `POST /api/announcements` — Create announcement
+- `PUT /api/announcements/:id` — Update announcement
+- `DELETE /api/announcements/:id` — Delete announcement
+
+### Users
+- `GET /api/users` — Get all users (admin only)
+- `PUT /api/users/:id/status` — Update user status (admin only)
+
+### Citizen PINs
+- `GET /api/pins` — Get all PINs (admin only)
+- `POST /api/pins` — Create PIN (admin only)
+- `PUT /api/pins/:id/status` — Update PIN status (admin only)
+- `POST /api/pins/verify` — Verify citizen PIN
+
+### Statistics
+- `GET /api/stats` — Get system statistics (admin only)
+
+## Project Structure
+
+```
+mukibara/
+├── backend/
+│   ├── config/          # Database configuration
+│   ├── controllers/     # Route handlers
+│   ├── middleware/       # Auth, upload, validation
+│   ├── models/          # Sequelize models
+│   ├── routes/          # API routes
+│   ├── utils/           # Seed data
+│   ├── uploads/         # Uploaded images
+│   └── server.js        # Express server entry
+├── frontend/
+│   └── src/
+│       ├── components/  # Reusable UI components
+│       ├── context/     # React Context (Auth)
+│       ├── layouts/     # Dashboard layout
+│       ├── pages/       # Page components
+│       ├── services/    # API service layer
+│       └── App.jsx      # Router & app entry
+└── database/
+    └── schema.sql       # PostgreSQL schema
+```
+
+## License
+
+MIT License
