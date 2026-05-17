@@ -30,6 +30,16 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'MukibaraConnect API irimo gukora neza!' });
 });
 
+const frontendPath = path.join(__dirname, '..', 'frontend', 'dist');
+app.use(express.static(frontendPath));
+
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api') || req.path.startsWith('/uploads')) {
+    return next();
+  }
+  res.sendFile(path.join(frontendPath, 'index.html'));
+});
+
 app.use((err, req, res, next) => {
   console.error(err.stack);
   if (err.name === 'MulterError') {
